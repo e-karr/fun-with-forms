@@ -7,10 +7,14 @@
   </head>
 
   <body>
-    <h1>Where's the ISS?</h1>
-    <button id="getLocation" onclick="handleGetIssLocationClick()">
-      Get current location
-    </button>
-    <p id="issLocation"></p>
+    <h1>Let's GET it</h1>
+    <form id="spaceOrBS">
+      <label for="issRequest">Get the ISS Location</label>
+      <input type="radio" name="issRequest" id="issRequest" />
+      <label for="corpoBabble">Get some corporate lingo</label>
+      <input type="radio" name="corpoBabble" id="corpoBabble" />
+      <input type="submit" />
+    </form>
+    <p id="displayResponse"></p>
   </body>
 </html>

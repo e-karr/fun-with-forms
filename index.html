@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What can I GET you?</title>
+    <link rel="stylesheet" type="text/css" />
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <h1>Let's GET it</h1>
+    <form id="spaceOrBS">
+      <label for="issRequest">Get the ISS Location</label>
+      <input
+        type="radio"
+        name="chooseRequest"
+        id="space"
+        value="space"
+        checked
+      />
+      <label for="corpoBabble">Get some corporate lingo</label>
+      <input
+        type="radio"
+        name="chooseRequest"
+        id="corporate"
+        value="corporate"
+      />
+      <input type="submit" />
+    </form>
+    <p id="displayResponse"></p>
+  </body>
+</html>
