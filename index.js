@@ -11,3 +11,17 @@ async function handleGetIssLocationClick() {
   locationParagraph.innerHTML =
     jsonData.iss_position.latitude + ', ' + jsonData.iss_position.longitude;
 }
+
+async function handleGetCorporatePhrase() {
+  const phraseParagraph = document.getElementById('corporatePhrase');
+  const corporatePhraseUrl = 'https://corporatebs-generator.sameerkumar.website/';
+
+  const response = await fetch(corporatePhraseUrl, {
+    method: 'GET',
+    headers: {},
+  });
+
+  const phrase = await response.json();
+
+  phraseParagraph.textContent = phrase.phrase;
+}
