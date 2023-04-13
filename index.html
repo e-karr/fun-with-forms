@@ -7,10 +7,32 @@
   </head>
 
   <body>
+
+    <div>
+      <h1>Let's GET it</h1>
+      <form action="" id="apiRequestForm">
+        <label for="space">
+          Select space station
+          <input 
+          type="radio" name="requestType" id="space" 
+          value="space"
+          checked>
+        </label>
+
+        <label for="corporate">
+          Select corporate BS
+          <input 
+          type="radio" name="requestType" id="corporate" value="corporate">
+        </label>
+
+        <button id="formButton" type="button">Submit</button>
+      </form>
+      <p id="responseParagraph"></p>
+    </div>
   
     <div>
       <h1>Where's the ISS?</h1>
-      <button id="getLocation" onclick="handleGetIssLocationClick()">
+      <button id="getLocation" onclick="handleGetRequest('space')">
         Get current location
       </button>
       <p id="issLocation"></p>
@@ -18,7 +40,7 @@
 
     <div>
       <h1>Add this to your next presentation!</h1>
-      <button onclick="handleGetCorporatePhrase()">Get Corporate Speak</button>
+      <button onclick="handleGetRequest('corporate')">Get Corporate Speak</button>
       <p id="corporatePhrase"></p>
     </div>
   </body>
